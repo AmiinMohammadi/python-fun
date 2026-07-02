@@ -1,61 +1,47 @@
 import random
 
-
-def check_guess(guess, min_range, max_range):
-
-    try:
-        num = int(guess)
-        if min_range <= num <= max_range:
-            return num, ""
-        return -1, "Guess must be between 0 to 100\nTry Again"
-
-    except ValueError:
-        return -1, "Guess must be number\nTry Again"
-
-
-def show_score(text, score):
-    print("—————————————————————")
-    print(f"{text}: {score}")
-    print("—————————————————————")
+from utils.evaluate_guess import evaluate_guess
+from utils.show_score import show_score
+from utils.validation_input import validate_input
 
 
 def main():
 
-    START_RANGE = 0
-    END_RANGE = 100
+    MIN_RANGE = 0
+    MAX_RANGE = 100
     user_score = 10
 
-    rnd_num = random.randint(START_RANGE, END_RANGE)
+    print("Hi!\nYou'r welcome")
+    rnd_num = random.randint(MIN_RANGE, MAX_RANGE)
+
+    print("I chose a number")
 
     while True:
+        input_user = input("\nWhat's your guess (or 'exit'): ").lstrip().lower()
 
-        user_guess, error_text = check_guess(
-            input("\nenter your new guess: "), START_RANGE, END_RANGE
-        )
+        if input_user == "exit":
+            print("Bye!")
+            break
+
+        user_guess, error_text = validate_input(input_user, MIN_RANGE, MAX_RANGE)
 
         if error_text:
             print(error_text)
             continue
 
-        if user_guess == rnd_num:
-            print("Correct Answer!\nYou won")
-            show_score("Your score: ", user_score)
-            break
+        user_score, msg, is_win = evaluate_guess(user_guess, rnd_num, user_score)
 
-        if (user_score := user_score - 1) == 0:
-            print("You don't have a chance.\nGame Over!")
-            show_score("Your score: ", user_score)
-            break
+        print(msg)
+        show_score("Your score", user_score)
 
-        print("Oh Missing answer...\nYou lost one point")
-
-        if user_guess < rnd_num:
-            print("Hint: it's larger")
-
-        else:
-            print("Hint: it's less than")
-
-        show_score("Your chances: ", user_score)
+        if is_win or user_score == 0:
+            ask_new_game = input("You want to play again? (y/n): ").lstrip().lower()
+            if ask_new_game == "n":
+                print("Bye!")
+                break
+            user_score = 10
+            rnd_num = random.randint(MIN_RANGE, MAX_RANGE)
+            print("I chose a number")
 
 
 if __name__ == "__main__":
