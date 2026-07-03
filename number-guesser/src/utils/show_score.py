@@ -1,4 +1,4 @@
-def show_score(text, score):
+def show_score(text: str, score: int):
     print("—————————————————————")
     print(f"{text}: {score}")
     print("—————————————————————")
