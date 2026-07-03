@@ -1,15 +1,20 @@
+"""Rock Paper Scissors Game - Main Entry Point.
+
+Author: https://github.com/Taha-26
+"""
+
 import random
 
-from utils.validation_input import validate_input
-from utils.print_menu import print_menu
 from utils.evaluate_actions import evaluate_actions
+from utils.print_menu import print_menu
+from utils.validation_input import validate_input
 
 # Valid actions of game
 game_actions = ["rock", "paper", "scissors"]
 
 
 while True:
-    print_menu()
+    print_menu(game_actions)
     input_user = (
         input("Type one action: (or 'exit'): ").strip().replace(" ", "").lower()
     )

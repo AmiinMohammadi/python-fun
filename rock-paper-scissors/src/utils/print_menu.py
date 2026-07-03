@@ -1,9 +1,9 @@
-def print_menu():
+from typing import List 
+def print_menu(action_list:List[str]):
     print("\n————————————————————————")
     print("ACTIONS:")
-    print("-> rock")
-    print("-> paper")
-    print("-> scissors")
+    for action in action_list:
+        print(f"-> {action}")
     print("————————————————————————")
 
 

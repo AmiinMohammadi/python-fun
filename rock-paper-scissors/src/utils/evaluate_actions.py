@@ -1,19 +1,19 @@
 def evaluate_actions(user_action: str, computer_choice: str) -> str:
-    """Evaluation actions of user and computer base on logic game.
+    """Evaluation actions of user and computer based on logic game.
 
     :param user_action: user's input.
     :param computer_choice: random choice of computer.
     :return: a string that specify user is winner or not.
     """
     if user_action == computer_choice:
-        return "equal!"
+        return "Draw!"
 
-    if (
-        (user_action == "rock" and computer_choice == "scissors")
-        or (user_action == "paper" and computer_choice == "rock")
-        or (user_action == "scissors" and computer_choice == "paper")
-    ):
-
+    winning_rules = {
+        "rock": "scissors",
+        "paper": "rock",
+        "scissors": "paper",
+    }
+    if winning_rules[user_action] == computer_choice:
         return "You won!"
 
     return "You lost ):"

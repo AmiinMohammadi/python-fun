@@ -1,4 +1,4 @@
-from typing import Tuple, List
+from typing import List, Tuple
 
 
 def validate_input(action: str, game_actions: List[str]) -> Tuple[str, str]:
