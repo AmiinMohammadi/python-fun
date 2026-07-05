@@ -14,7 +14,7 @@ game_actions = ["rock", "paper", "scissors"]
 
 
 while True:
-    print_menu(game_actions)
+    print_menu(game_actions )
     input_user = (
         input("Type one action: (or 'exit'): ").strip().replace(" ", "").lower()
     )

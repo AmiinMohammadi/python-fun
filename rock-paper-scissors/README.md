@@ -1,8 +1,12 @@
+<img src="assets/banner1.png">
+
+---
+
 # Rock Paper Scissors Game
 A classic, interactive command-line implementation of the traditional Rock, Paper, Scissors game.
 
 ---
-## Project Structure
+## 📂 Project Structure
 
 ```text
 ├── src/
@@ -15,12 +19,12 @@ A classic, interactive command-line implementation of the traditional Rock, Pape
 └── README.md
 ```
 ---
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Python 3.x
 
 ---
-## How to Run
+## 💻 How to Run
 
 ### Prerequisites
 - Make sure Python 3.x is installed on your system.
