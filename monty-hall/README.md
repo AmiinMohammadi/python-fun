@@ -23,7 +23,7 @@ Make sure you have Python installed on your system. You will need `streamlit` an
 1. **Clone the repository:**
    
    ```bash
-   git clone https://github.com/Taha-26/Monty-Hall-Simulation.git
+   git clone https://github.com/AmiinMohammadi/Monty-Hall-Simulation.git
    
    cd Monty-Hall-Simulation
    ```
