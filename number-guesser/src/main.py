@@ -1,6 +1,6 @@
 """Number Guesser Game - Main Entry Point.
 
-Author: https://github.com/Taha-26
+Author: https://github.com/AmiinMohammadi
 """
 
 import random
