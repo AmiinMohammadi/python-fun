@@ -1,4 +1,4 @@
-"""Author: https://github.com/Taha-26"""
+"""Author: https://github.com/AmiinMohammadi"""
 
 
 def is_happy(number: int) -> bool:
