@@ -33,7 +33,7 @@ A classic, interactive command-line implementation of the traditional Rock, Pape
 1. **Open the terminal and clone this repository:**
 
     ```shell
-    git clone https://github.com/Taha-26/Rock-Paper-Scissors-Game.git
+    git clone https://github.com/AmiinMohammadi/Rock-Paper-Scissors-Game.git
     ```
 2. **Open the terminal and clone this repository:**
 
