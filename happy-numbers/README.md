@@ -23,7 +23,7 @@ Make sure you have Python 3 installed. Clone the repository and execute the scri
 
 ```shell
 # Clone the repository
-git clone https://github.com/Taha-26/Happy-Numbers.git
+git clone https://github.com/AmiinMohammadi/Happy-Numbers.git
 
 # Navigate into the project folder
 cd Happy-Numbers
